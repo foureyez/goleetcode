@@ -3,23 +3,23 @@ package easy
 import "strconv"
 
 func calPoints(operations []string) int {
-	stack := make([]int, 0)
+	scores := make([]int, 0)
 	for _, op := range operations {
 		switch op {
 		case "+":
-			stack = append(stack, stack[len(stack)-1]+stack[len(stack)-2])
+			scores = append(scores, scores[len(scores)-1]+scores[len(scores)-2])
 		case "D":
-			stack = append(stack, 2*stack[len(stack)-1])
+			scores = append(scores, 2*scores[len(scores)-1])
 		case "C":
-			stack = stack[:len(stack)-1]
+			scores = scores[:len(scores)-1]
 		default:
 			score, _ := strconv.Atoi(op)
-			stack = append(stack, score)
+			scores = append(scores, score)
 		}
 	}
 
 	total := 0
-	for _, s := range stack {
+	for _, s := range scores {
 		total += s
 	}
 	return total
