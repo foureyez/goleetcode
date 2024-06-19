@@ -1,4 +1,4 @@
-package easy
+package strings
 
 import (
 	"strings"

@@ -1,4 +1,4 @@
-package medium
+package strings
 
 import (
 	"strings"

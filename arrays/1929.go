@@ -1,4 +1,4 @@
-package easy
+package arrays
 
 func getConcatenation(nums []int) []int {
 	ans := make([]int, 0)

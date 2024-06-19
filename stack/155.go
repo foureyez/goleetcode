@@ -1,4 +1,4 @@
-package medium
+package stack
 
 type MinStack struct {
 	elems []Elem

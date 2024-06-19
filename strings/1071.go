@@ -1,4 +1,4 @@
-package easy
+package strings
 
 /*
 https://leetcode.com/problems/longest-ideal-subsequence/?envType=daily-question&envId=2024-04-25

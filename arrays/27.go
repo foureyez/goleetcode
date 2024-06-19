@@ -1,4 +1,4 @@
-package easy
+package arrays
 
 func removeElement(nums []int, val int) int {
 	var i, j int
