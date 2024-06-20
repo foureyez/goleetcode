@@ -9,12 +9,6 @@ import (
 
 // https://leetcode.com/problems/maximum-depth-of-binary-tree/description/?envType=study-plan-v2&envId=top-interview-150
 
-type TreeNode struct {
-	Left  *TreeNode
-	Right *TreeNode
-	Val   int
-}
-
 func maxDepth(root *TreeNode) int {
 	return int(maxDepthIterative(root))
 	// return int(maxDepthRecursive(0, root))
@@ -38,7 +32,6 @@ func maxDepthIterative(node *TreeNode) int {
 	maxDepth := 0
 	for currLevelNodes.Size() > 0 {
 		size := currLevelNodes.Size()
-		fmt.Println(size)
 		for i := 0; i < size; i++ {
 			currNode := currLevelNodes.Remove()
 			if currNode.Left != nil {
@@ -51,6 +44,5 @@ func maxDepthIterative(node *TreeNode) int {
 		}
 		maxDepth++
 	}
-
 	return maxDepth
 }
